@@ -4,28 +4,45 @@ let currentLang = localStorage.getItem('language') || 'en';
 // Sample data for games and team members
 const gamesData = [
   {
-    title: { en: "Tuanna", az: "Tuanna" },
+    title: { en: "Tuana", az: "Tuana" },
     description: {
-      en: "Epic adventure through Caucasian mountains inspired by national hero Koroğlu",
-      az: "Milli qəhrəman Koroğludan ilhamlanmış Qafqaz dağları boyu epik macəra"
+      en: "A resource management game with a story about the friendship between a little Turkish girl and her horse.",
+      az: "Balaca bir türk qızı ilə atının dostluğunu anlatan bir hekayəli resurs menecment oyunu"
     },
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    image: "images/games/tuana_xsolla.png",
+    link: "https://hersai-studio.itch.io/tuana",
+    released: true
   },
   {
-    title: { en: "Shahnameh Chronicles", az: "Şahnamə Xronikaları" },
+    title: { en: "Rhythm of The Rain", az: "Rhythm of The Rain" },
     description: {
-      en: "Strategy RPG based on Ferdowsi's epic poem Shahnameh",
-      az: "Firdovsinin Şahnamə epik poeması əsasında strategiya RPG"
+      en: "Complete the ritual by moving your body parts and receive a gift from the god!",
+      az: "Bədən üzvlərini hərəkət etdirərək ritualı tamamla və tanrıdan hədiyyə al!"
     },
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    image: "images/games/rhythm_of_the_rain_banner_xsolla.png",
+    link: "https://pixelnodesstudio.itch.io/rhythm-of-the-rain",
+    released: true
+
   },
   {
-    title: { en: "Baku Nights", az: "Bakı Gecələri" },
+    title: { en: "Epic of Gorgud", az: "Epic of Gorgud" },
     description: {
       en: "Action-adventure game set in futuristic Baku city",
       az: "Gələcəkdə Bakı şəhərində keçən aksiya-macəra oyunu"
     },
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    image: "images/games/epic_of_gorgud_xsolla.png",
+    link: "#",
+    released: false
+  },
+  {
+    title: { en: "Legend Of The Simurg", az: "Legend Of The Simurg" },
+    description: {
+      en: "The little bird's adventure of searching for the Simurgh bird to save his village.",
+      az: "Kiçik quşun kəndini xilas etmək üçün Simurq quşunu axtarmaq macərası"
+    },
+    image: "images/games/legend_of_the_simurg_xsolla.png",
+    link: "#",
+    released: false
   }
 ];
 
@@ -101,7 +118,7 @@ function renderGames() {
       <div class="game-info">
         <h3>${game.title[currentLang]}</h3>
         <p>${game.description[currentLang]}</p>
-        <a href="#" class="btn">${currentLang === 'en' ? 'Play Now' : 'İndi Oyna'}</a>
+        <a href=${game.link} target="${game.released ? '_blank' : ''}" class="btn">${currentLang === 'en' ? (game.released ? 'Play Now' : 'Soon...') : (game.released ? 'İndi Oyna' : 'Tezliklə') }</a>
       </div>
     `;
     gamesContainer.appendChild(gameCard);

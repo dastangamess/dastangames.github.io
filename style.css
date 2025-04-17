@@ -94,7 +94,7 @@
     text-align: center;
     padding: 8rem 1rem 6rem;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+                url("images/logos/banner_xsolla.png");
     background-size: cover;
     background-position: center;
     color: white;
