@@ -4,7 +4,7 @@ let currentLang = localStorage.getItem('language') || 'en';
 // Sample data for games and team members
 const gamesData = [
   {
-    title: { en: "Koroğlu Legacy", az: "Koroğlu Mirası" },
+    title: { en: "Tuanna", az: "Tuanna" },
     description: {
       en: "Epic adventure through Caucasian mountains inspired by national hero Koroğlu",
       az: "Milli qəhrəman Koroğludan ilhamlanmış Qafqaz dağları boyu epik macəra"
@@ -29,21 +29,37 @@ const gamesData = [
   }
 ];
 
+//https://randomuser.me/api/portraits/men/75.jpg
 const teamData = [
   {
-    name: { en: "Ali Hasanov", az: "Əli Həsənov" },
-    role: { en: "Creative Director", az: "Yaradıcı Direktor" },
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    name: { en: "Nurlan Osmanov", az: "Nurlan Osmanov" },
+    role: { en: "Developer", az: "Proqramçı" },
+    image: "images/team/nurlan_xsolla.png"
   },
   {
-    name: { en: "Aysel Mammadova", az: "Aysəl Məmmədova" },
-    role: { en: "Lead Developer", az: "Baş Proqramçı" },
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    name: { en: "Tahir Yaqubov ", az: "Tahir Yaqubov" },
+    role: { en: "Game Designer", az: "Oyun Dizayneri" },
+    image: "images/team/tahir_xsolla.jpg"
   },
   {
-    name: { en: "Orkhan Ibrahimli", az: "Orxan İbrahimli" },
-    role: { en: "Art Director", az: "Qrafik Dizayner" },
-    image: "https://randomuser.me/api/portraits/men/75.jpg"
+    name: { en: "Qezenfer Safarov", az: "Qəzənfər Səfərov" },
+    role: { en: "Developer", az: "Proqramçı" },
+    image: "images/team/qezenfer_xsolla.png"
+  },
+  {
+    name: { en: "Nicat Aliyev", az: "Nicat Əliyev" },
+    role: { en: "2D Artist", az: "2D Rəssam" },
+    image: "images/team/nicat_xsolla.jpg"
+  },
+  {
+    name: { en: "Yadulla Mirzayev", az: "Yadulla Mirzəyev" },
+    role: { en: "Developer", az: "Proqramçı" },
+    image: "images/team/yadik_xsolla.jpg"
+  },
+  {
+    name: { en: "Riad Valiyev", az: "Riad Vəliyev" },
+    role: { en: "Developer", az: "Proqramçı" },
+    image: "images/team/riad1_xsolla.jpg"
   }
 ];
 
