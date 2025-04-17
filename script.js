@@ -182,5 +182,15 @@ function init() {
   });
 }
 
+function updateContactContent() {
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.textContent = el.getAttribute(`data-${currentLang}`);
+  });
+}
+
+// Əlaqə bölməsini də dil dəyişəndə yeniləmək üçün
+document.addEventListener('DOMContentLoaded', () => {
+  updateContactContent();
+});
 // When DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
