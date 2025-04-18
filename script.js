@@ -51,32 +51,38 @@ const teamData = [
   {
     name: { en: "Nurlan Osmanov", az: "Nurlan Osmanov" },
     role: { en: "Developer", az: "Proqramçı" },
-    image: "images/team/nurlan_xsolla.png"
+    image: "images/team/nurlan_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/nurlan-osmanov-30a8a7227/"
   },
   {
     name: { en: "Tahir Yaqubov ", az: "Tahir Yaqubov" },
     role: { en: "Game Designer", az: "Oyun Dizayneri" },
-    image: "images/team/tahir_xsolla.jpg"
+    image: "images/team/tahir_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/tahir-yaqubov-7914b8295/"
   },
   {
-    name: { en: "Qezenfer Safarov", az: "Qəzənfər Səfərov" },
+    name: { en: "Gazanfar Safarov", az: "Qəzənfər Səfərov" },
     role: { en: "Developer", az: "Proqramçı" },
-    image: "images/team/qezenfer_xsolla.png"
+    image: "images/team/qezenfer_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/qezenfer-seferov-628072207"
   },
   {
     name: { en: "Nicat Aliyev", az: "Nicat Əliyev" },
     role: { en: "2D Artist", az: "2D Rəssam" },
-    image: "images/team/nicat_xsolla.jpg"
+    image: "images/team/nicat_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/nicat-%C9%99liyev-6a091a243/"
   },
   {
     name: { en: "Yadulla Mirzayev", az: "Yadulla Mirzəyev" },
     role: { en: "Developer", az: "Proqramçı" },
-    image: "images/team/yadik_xsolla.jpg"
+    image: "images/team/yadik_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/yadulla-m-a84a41247/"
   },
   {
     name: { en: "Riad Valiyev", az: "Riad Vəliyev" },
     role: { en: "Developer", az: "Proqramçı" },
-    image: "images/team/riad1_xsolla.jpg"
+    image: "images/team/riad_xsolla_new.jpg",
+    link: "https://www.linkedin.com/in/riad-veliyev-8ba04814b/"
   }
 ];
 
@@ -131,8 +137,12 @@ function renderTeam() {
   teamContainer.innerHTML = '';
 
   teamData.forEach(member => {
-    const memberCard = document.createElement('div');
+    const memberCard = document.createElement('a');
     memberCard.className = 'team-member';
+    memberCard.href = member.link; // link sahəsi `teamData` içində olmalıdır
+    memberCard.target = '_blank'; // yeni səhifədə açılsın
+    memberCard.rel = 'noopener noreferrer';
+
     memberCard.innerHTML = `
       <img src="${member.image}" alt="${member.name[currentLang]}" class="member-image">
       <div class="member-info">
@@ -140,9 +150,11 @@ function renderTeam() {
         <p>${member.role[currentLang]}</p>
       </div>
     `;
+
     teamContainer.appendChild(memberCard);
   });
 }
+
 
 // Toggle mobile menu
 function toggleMenu() {
