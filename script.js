@@ -28,7 +28,7 @@ const gamesData = [
     title: { en: "Epic of Gorgud", az: "Epic of Gorgud" },
     description: {
       en: "Metroidvania game based on \"Epic of Dede Qorqud\"",
-      az: "Gələcəkdə Bakı şəhərində keçən aksiya-macəra oyunu"
+      az: "\"Dədə Qorqud dastanı\" əsasında Metroidvania oyunu"
     },
     image: "images/games/epic_of_gorgud_xsolla.png",
     link: "#",
